@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { counter } from "./favoritos";
+import { movies } from "./favoritos";
 
 export const reducers = combineReducers({
-  counter
+  movies
 });

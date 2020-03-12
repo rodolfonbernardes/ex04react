@@ -6,7 +6,7 @@ const initialState = {
   favMovies: [{}]
 };
 
-export const counter = (state = initialState, action) => {
+export const movies = (state = initialState, action) => {
   switch (action.type) {
     case SET_FAV:
       return {

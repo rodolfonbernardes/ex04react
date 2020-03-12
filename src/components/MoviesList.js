@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { MoviesService } from "../services/MoviesService";
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   setFavoritos
 } from "../actions/addMovies";
@@ -11,7 +11,6 @@ export const MoviesList = () => {
   const [movies, setMovies] = useState({ data: { results: [] }});
   
   const dispatch = useDispatch();
-  const counter = useSelector(state => state.counter);
 
     const requestMovies = async () => {
       const moviesResult = await MoviesService.getPopularMovies();

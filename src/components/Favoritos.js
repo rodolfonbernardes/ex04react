@@ -1,6 +1,17 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {useSelector} from "react-redux";
 
-export function listMovies() {
-    const counter = useSelector(state => state.favMovies);
-}
+export const Favoritos = () => {
+    const movies = useSelector(state => state.movies.favMovies);
+    return (
+    <div>
+     
+     {movies.map(movie => (
+        <li>{movie.title}</li>
+      ))}
+    
+        <br/>
+
+    </div>
+  );
+};
